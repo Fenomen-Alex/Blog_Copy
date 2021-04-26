@@ -7,14 +7,11 @@ import {
   Nav,
   Navbar} from 'react-bootstrap';
 import logo from '../assets/star_wars_logo.png';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contacts from '../Pages/Contacts';
 import Blog from '../Pages/Blog';
-import { createBrowserHistory } from "history";
-
-const history = createBrowserHistory();
 
 class Header extends Component {
   render() {
@@ -51,7 +48,7 @@ class Header extends Component {
           </Container>
         </Navbar>
 
-        <Router basename={process.env.PUBLIC_URL} history={history}>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/Blog_Copy/" component={Home} />
             <Route exact path="/Blog_Copy/about" component={About} />
