@@ -51,7 +51,7 @@ class Header extends Component {
           </Container>
         </Navbar>
 
-        <Router history={history}>
+        <Router basename="/Blog_Copy/" history={history}>
           <Switch>
             <Route exact path="/Blog_Copy/" component={Home} />
             <Route exact path="/Blog_Copy/about" component={About} />
