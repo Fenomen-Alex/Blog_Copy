@@ -21,7 +21,7 @@ class Header extends Component {
         <Router basename="/">
           <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
             <Container>
-              <Link to="/"><Navbar.Brand href="/">
+              <Link className="nav-link" to="/"><Navbar.Brand href="/">
                 <img
                   src={logo}
                   alt="Logo"
@@ -33,10 +33,10 @@ class Header extends Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                  <Link to="/"><Nav.Link href="/">Home</Nav.Link></Link>
-                  <Link to="/about"><Nav.Link href="/">About</Nav.Link></Link>
-                  <Link to="/contacts"><Nav.Link href="/">Contacts</Nav.Link></Link>
-                  <Link to="/blog"><Nav.Link href="/">Blog</Nav.Link></Link>
+                  <Link className="nav-link" to="/"><Nav.Link href="/">Home</Nav.Link></Link>
+                  <Link className="nav-link" to="/about"><Nav.Link href="/">About</Nav.Link></Link>
+                  <Link className="nav-link" to="/contacts"><Nav.Link href="/">Contacts</Nav.Link></Link>
+                  <Link className="nav-link" to="/blog"><Nav.Link href="/">Blog</Nav.Link></Link>
 
                   {/*<Nav.Link href="/Blog_Copy/about">About</Nav.Link>*/}
                   {/*<Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>*/}
