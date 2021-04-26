@@ -70,7 +70,7 @@ const About = () => {
                   <img
                     src={map}
                     alt="Map"
-                    height="600"
+                    width="100%"
                   />
                 </a>
               </Tab.Pane>
