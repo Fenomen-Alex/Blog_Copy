@@ -35,9 +35,9 @@ class Header extends Component {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link href="/Blog_Copy/">Home</Nav.Link>
-                <Nav.Link href="/Blog_Copy//about">About</Nav.Link>
-                <Nav.Link href="/Blog_Copy//contacts">Contacts</Nav.Link>
-                <Nav.Link href="/Blog_Copy//blog">Blog</Nav.Link>
+                <Nav.Link href="/Blog_Copy/about">About</Nav.Link>
+                <Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>
+                <Nav.Link href="/Blog_Copy/blog">Blog</Nav.Link>
               </Nav>
               <Form inline>
                 <FormControl
@@ -54,9 +54,9 @@ class Header extends Component {
         <Router history={history}>
           <Switch>
             <Route exact path="/Blog_Copy/" component={Home} />
-            <Route exact path="/Blog_Copy//about" component={About} />
-            <Route exact path="/Blog_Copy//contacts" component={Contacts} />
-            <Route exact path="/Blog_Copy//blog" component={Blog} />
+            <Route exact path="/Blog_Copy/about" component={About} />
+            <Route exact path="/Blog_Copy/contacts" component={Contacts} />
+            <Route exact path="/Blog_Copy/blog" component={Blog} />
           </Switch>
         </Router>
       </>
