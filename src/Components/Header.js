@@ -21,7 +21,7 @@ class Header extends Component {
         <Router basename={process.env.PUBLIC_URL}>
           <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand href="/">
+              <Navbar.Brand href="/Blog_Copy/">
                 <img
                   src={logo}
                   alt="Logo"
@@ -33,10 +33,10 @@ class Header extends Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/about">About</Nav.Link>
-                  <Nav.Link href="/contacts">Contacts</Nav.Link>
-                  <Nav.Link href="/blog">Blog</Nav.Link>
+                  <Nav.Link href="/Blog_Copy/">Home</Nav.Link>
+                  <Nav.Link href="/Blog_Copy/about">About</Nav.Link>
+                  <Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>
+                  <Nav.Link href="/Blog_Copy/blog">Blog</Nav.Link>
                 </Nav>
                 <Form inline>
                   <FormControl
@@ -52,10 +52,10 @@ class Header extends Component {
 
 
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/contacts" component={Contacts}/>
-            <Route exact path="/blog" component={Blog}/>
+            <Route exact path="/Blog_Copy/" component={Home}/>
+            <Route exact path="/Blog_Copy/about" component={About}/>
+            <Route exact path="/Blog_Copy/contacts" component={Contacts}/>
+            <Route exact path="/Blog_Copy/blog" component={Blog}/>
           </Switch>
         </Router>
       </>
