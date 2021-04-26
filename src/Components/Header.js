@@ -8,7 +8,7 @@ import {
   Navbar
 } from 'react-bootstrap';
 import logo from '../assets/star_wars_logo.png';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contacts from '../Pages/Contacts';
@@ -18,10 +18,10 @@ class Header extends Component {
   render() {
     return (
       <>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename="/">
           <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand href="/Blog_Copy/">
+              <Link to="/"><Navbar.Brand href="/">
                 <img
                   src={logo}
                   alt="Logo"
@@ -29,14 +29,18 @@ class Header extends Component {
                   width="30"
                   className="d-inline-block align-top"
                 /> My Blog
-              </Navbar.Brand>
+              </Navbar.Brand></Link>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                  <Nav.Link href="/Blog_Copy/">Home</Nav.Link>
-                  <Nav.Link href="/Blog_Copy/about">About</Nav.Link>
-                  <Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>
-                  <Nav.Link href="/Blog_Copy/blog">Blog</Nav.Link>
+                  <Link to="/"><Nav.Link href="/">Home</Nav.Link></Link>
+                  <Link to="/about"><Nav.Link href="/">About</Nav.Link></Link>
+                  <Link to="/contacts"><Nav.Link href="/">Contacts</Nav.Link></Link>
+                  <Link to="/blog"><Nav.Link href="/">Blog</Nav.Link></Link>
+
+                  {/*<Nav.Link href="/Blog_Copy/about">About</Nav.Link>*/}
+                  {/*<Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>*/}
+                  {/*<Nav.Link href="/Blog_Copy/blog">Blog</Nav.Link>*/}
                 </Nav>
                 <Form inline>
                   <FormControl
@@ -52,10 +56,10 @@ class Header extends Component {
 
 
           <Switch>
-            <Route exact path="/Blog_Copy/" component={Home}/>
-            <Route exact path="/Blog_Copy/about" component={About}/>
-            <Route exact path="/Blog_Copy/contacts" component={Contacts}/>
-            <Route exact path="/Blog_Copy/blog" component={Blog}/>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/contacts" component={Contacts}/>
+            <Route exact path="/blog" component={Blog}/>
           </Switch>
         </Router>
       </>
