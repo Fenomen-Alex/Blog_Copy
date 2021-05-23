@@ -37,10 +37,6 @@ class Header extends Component {
                   <Link className="nav-link" to="/about"><Nav.Link href="/">About</Nav.Link></Link>
                   <Link className="nav-link" to="/contacts"><Nav.Link href="/">Contacts</Nav.Link></Link>
                   <Link className="nav-link" to="/blog"><Nav.Link href="/">Blog</Nav.Link></Link>
-
-                  {/*<Nav.Link href="/Blog_Copy/about">About</Nav.Link>*/}
-                  {/*<Nav.Link href="/Blog_Copy/contacts">Contacts</Nav.Link>*/}
-                  {/*<Nav.Link href="/Blog_Copy/blog">Blog</Nav.Link>*/}
                 </Nav>
                 <Form inline>
                   <FormControl
@@ -53,7 +49,6 @@ class Header extends Component {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-
 
           <Switch>
             <Route exact path="/" component={Home}/>
